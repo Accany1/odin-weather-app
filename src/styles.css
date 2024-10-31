@@ -1,0 +1,75 @@
+body,
+html {
+    background-color: #0d1b2a;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+body{
+    font-family: 'Noto Sans', system-ui,-apple-system, BlinkMacSystemFont,Arial, sans-serif; 
+}
+
+div {
+    color: #e0e1dd;
+}
+
+.container {
+    display: grid;
+}
+
+form {
+    display: flex;
+    justify-content: right;
+    margin: 50px;
+}
+
+input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.result-container {
+    display:grid;
+    grid-template-columns: 200px 100px;
+    grid-template-rows: 50px 50px 50px;
+    margin: 50px;
+    grid-template-areas: "address address" "temp weather" "temp wind";
+}
+
+.temp {
+    grid-area: temp;
+    align-content: center;
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.address {
+    font-size: 2em;
+    font-weight: bold;
+    grid-area: address;
+}
+
+.weather,
+.wind {
+    font-size: 1em;
+    align-content: center;
+}
+
+.loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
